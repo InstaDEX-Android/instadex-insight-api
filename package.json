@@ -1,7 +1,7 @@
 {
   "name": "instadex-insight-api",
-  "description": "A InstaDEX blockchain REST and web socket API service for Bitcore Node.",
-  "version": "0.4.4",
+  "description": "A Particl blockchain REST and web socket API service for Bitcore Node.",
+  "version": "0.4.3",
   "repository": "git://github.com/instadex-android/instadex-insight-api.git",
   "contributors": [
     {
