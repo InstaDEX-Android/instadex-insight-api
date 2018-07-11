@@ -9,7 +9,7 @@ var txinfos = {
   totalCount: 2,
   items: [
     {
-      'address': 'mkPvAKZ2rar6qeG3KjBtJHHMSP1wFZH7Er',
+      'address': 'yRCQiUCPSpHWZDJZ2tr8MvBAh1VHqhVd7w',
       'satoshis': 2782729129,
       'height': 534105,
       'confirmations': 123,
@@ -49,7 +49,7 @@ var txinfos = {
       }
     },
     {
-      'address': 'mkPvAKZ2rar6qeG3KjBtJHHMSP1wFZH7Er',
+      'address': 'yRCQiUCPSpHWZDJZ2tr8MvBAh1VHqhVd7w',
       'satoshis': -2782729129,
       'height': 534110,
       'confirmations': 118,
@@ -97,13 +97,14 @@ var tx = {
   blockHash: '0000000000000041ddc94ecf4f86a456a83b2e320c36c6f0c13ff92c7e75f013',
   hex: '0100000002f379708395d0a0357514205a3758a0317926428356e54a09089852fc6f7297ea010000008a473044022054233934268b30be779fad874ef42e8db928ba27a1b612d5f111b3ee95eb271c022024272bbaf2dcc4050bd3b9dfa3c93884f6ba6ad7d257598b8245abb65b5ab1e40141040682fdb281a8533e21e13dfd1fcfa424912a85b6cdc4136b5842c85de05ac1f0e4a013f20702adeb53329de13b2ef388e5ed6244676f4f1ee4ee685ab607964dffffffffb758ffd4c31693d9620f326385404530a079d5e60a90b94e46d3c2dbc29c0a98020000008a473044022044938ac3f8fcb8da29011df6397ed28cc7e894cdc35d596d4f3623bd8c7e465f022014829c6e0bd7ee97a1bcfef6b85c5fd232653f289394fc6ce6ebb41c73403f1b014104d9ccf88efc6e5be3151fae5e848efd94c91d75e7bf621f9f724a8caff51415338525d3239fae6b93826edf759dd562f77693e55dfa852ffd96a92d683db590f2ffffffff03605b0300000000001976a914b9bbd76588d9e4e09f0369a9aa0b2749a11c4e8d88ac40992d03000000001976a914d2ec20bb8e5f25a52f730384b803d95683250e0b88ac256c0400000000001976a914583df9fa56ad961051e00ca93e68dfaf1eab9ec588ac00000000',
   hash: '63b68becb0e514b32317f4b29a5cf0627d4087e54ac17f686fcb1d9a27680f73',
+  txlock: false,
   version: 1,
   inputSatoshis: 53839829,
   outputSatoshis: 53829829,
   feeSatoshis: 10000,
   inputs: [
     {
-      address: 'moFfnRwt77pApKnnU6m5uocFaa43aAYpt5',
+      address: 'yU4ALabEhMFaXtqJBGRKySW4qCXQG365uR',
       prevTxId: 'ea97726ffc529808094ae5568342267931a058375a20147535a0d095837079f3',
       outputIndex: 1,
       sequence: 4294967295,
@@ -112,7 +113,7 @@ var tx = {
       satoshis: 53540000,
     },
     {
-      address: 'n1XJBAyU4hNR4xRtY3UxnmAteoJX83p5qv',
+      address: 'ygKnjKcpevopnXUQFD9CrQ4huRmspzbajv',
       prevTxId: '980a9cc2dbc2d3464eb9900ae6d579a03045408563320f62d99316c3d4ff58b7',
       outputIndex: 2,
       sequence: 4294967295,
@@ -126,16 +127,16 @@ var tx = {
       satoshis: 220000,
       script: '76a914b9bbd76588d9e4e09f0369a9aa0b2749a11c4e8d88ac',
       scriptAsm: 'OP_DUP OP_HASH160 b9bbd76588d9e4e09f0369a9aa0b2749a11c4e8d OP_EQUALVERIFY OP_CHECKSIG',
-      address: 'mxT2KzTUQvsaYYothDtjcdvyAdaHA9ofMp'
+      address: 'ydFWt96q1AJzG7rQQPYygGpnRG3djmG8nJ'
     },
     {
       satoshis: 53320000,
-      address: 'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK',
+      address: 'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE',
       script: '76a914d2ec20bb8e5f25a52f730384b803d95683250e0b88ac',
       scriptAsm: 'OP_DUP OP_HASH160 d2ec20bb8e5f25a52f730384b803d95683250e0b OP_EQUALVERIFY OP_CHECKSIG'
     },
     {
-      address: 'moZY18rGNmh4YCPeugtGW46AkkWMQttBUD',
+      address: 'yUN2ZHVcy18UFmSAcrYWZgyz1NyhzY9BD7',
       satoshis: 289829,
       script: '76a914583df9fa56ad961051e00ca93e68dfaf1eab9ec588ac',
       scriptAsm: 'OP_DUP OP_HASH160 583df9fa56ad961051e00ca93e68dfaf1eab9ec5 OP_EQUALVERIFY OP_CHECKSIG'
@@ -155,7 +156,7 @@ var txinfos2 = {
 
 var utxos = [
   {
-    'address': 'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK',
+    'address': 'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE',
     'txid': '63b68becb0e514b32317f4b29a5cf0627d4087e54ac17f686fcb1d9a27680f73',
     'outputIndex': 1,
     'timestamp': 1441116143,
@@ -165,7 +166,7 @@ var utxos = [
     'confirmations': 50
   },
   {
-    'address': 'moZY18rGNmh4YCPeugtGW46AkkWMQttBUD',
+    'address': 'yUN2ZHVcy18UFmSAcrYWZgyz1NyhzY9BD7',
     'txid': '63b68becb0e514b32317f4b29a5cf0627d4087e54ac17f686fcb1d9a27680f73',
     'outputIndex': 2,
     'timestamp': 1441116143,
@@ -196,13 +197,13 @@ describe('Addresses', function() {
 
     var addresses = new AddressController(node);
     var req = {
-      addr: 'mkPvAKZ2rar6qeG3KjBtJHHMSP1wFZH7Er',
+      addr: 'yRCQiUCPSpHWZDJZ2tr8MvBAh1VHqhVd7w',
       query: {}
     };
 
     it('should have correct data', function(done) {
       var insight = {
-        'addrStr': 'mkPvAKZ2rar6qeG3KjBtJHHMSP1wFZH7Er',
+        'addrStr': 'yRCQiUCPSpHWZDJZ2tr8MvBAh1VHqhVd7w',
         'balance': 0,
         'balanceSat': 0,
         'totalReceived': 27.82729129,
@@ -238,7 +239,7 @@ describe('Addresses', function() {
         query: {
           noTxList: 1
         },
-        addr: 'mkPvAKZ2rar6qeG3KjBtJHHMSP1wFZH7Er'
+        addr: 'yRCQiUCPSpHWZDJZ2tr8MvBAh1VHqhVd7w'
       };
       var send = sinon.stub();
       var status = sinon.stub().returns({send: send});
@@ -308,7 +309,7 @@ describe('Addresses', function() {
     it('should have correct data', function(done) {
       var insight = [
         {
-          'address': 'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK',
+          'address': 'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE',
           'txid': '63b68becb0e514b32317f4b29a5cf0627d4087e54ac17f686fcb1d9a27680f73',
           'vout': 1,
           'ts': 1441116143,
@@ -339,7 +340,7 @@ describe('Addresses', function() {
       var addresses = new AddressController(node);
 
       var req = {
-        addr: 'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK'
+        addr: 'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE'
       };
 
       var res = {
@@ -358,7 +359,7 @@ describe('Addresses', function() {
     it('should have the correct data', function(done) {
       var insight = [
         {
-          'address': 'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK',
+          'address': 'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE',
           'txid': '63b68becb0e514b32317f4b29a5cf0627d4087e54ac17f686fcb1d9a27680f73',
           'vout': 1,
           'ts': 1441116143,
@@ -370,7 +371,7 @@ describe('Addresses', function() {
           'confirmationsFromCache': true
         },
         {
-          'address': 'moZY18rGNmh4YCPeugtGW46AkkWMQttBUD',
+          'address': 'yUN2ZHVcy18UFmSAcrYWZgyz1NyhzY9BD7',
           'txid': '63b68becb0e514b32317f4b29a5cf0627d4087e54ac17f686fcb1d9a27680f73',
           'vout': 2,
           'ts': 1441116143,
@@ -403,7 +404,7 @@ describe('Addresses', function() {
       var addresses = new AddressController(node);
 
       var req = {
-        addrs: 'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK,moZY18rGNmh4YCPeugtGW46AkkWMQttBUD'
+        addrs: 'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE,yUN2ZHVcy18UFmSAcrYWZgyz1NyhzY9BD7'
       };
 
       var res = {
@@ -427,6 +428,7 @@ describe('Addresses', function() {
         'items': [
           {
             'txid': '63b68becb0e514b32317f4b29a5cf0627d4087e54ac17f686fcb1d9a27680f73',
+            'txlock': false,
             'version': 1,
             'locktime': 0,
             'vin': [
@@ -439,7 +441,7 @@ describe('Addresses', function() {
                 },
                 'sequence': 4294967295,
                 'n': 0,
-                'addr': 'moFfnRwt77pApKnnU6m5uocFaa43aAYpt5',
+                'addr': 'yU4ALabEhMFaXtqJBGRKySW4qCXQG365uR',
                 'valueSat': 53540000,
                 'value': 0.5354,
                 'doubleSpentTxID': null
@@ -453,7 +455,7 @@ describe('Addresses', function() {
                 },
                 'sequence': 4294967295,
                 'n': 1,
-                'addr': 'n1XJBAyU4hNR4xRtY3UxnmAteoJX83p5qv',
+                'addr': 'ygKnjKcpevopnXUQFD9CrQ4huRmspzbajv',
                 'valueSat': 299829,
                 'value': 0.00299829,
                 'doubleSpentTxID': null
@@ -469,7 +471,7 @@ describe('Addresses', function() {
                   'reqSigs': 1,
                   'type': 'pubkeyhash',
                   'addresses': [
-                    'mxT2KzTUQvsaYYothDtjcdvyAdaHA9ofMp'
+                    'ydFWt96q1AJzG7rQQPYygGpnRG3djmG8nJ'
                   ]
                 },
                 'spentHeight': null,
@@ -485,7 +487,7 @@ describe('Addresses', function() {
                   'reqSigs': 1,
                   'type': 'pubkeyhash',
                   'addresses': [
-                    'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK'
+                    'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE'
                   ],
                 },
                 'spentHeight': null,
@@ -501,7 +503,7 @@ describe('Addresses', function() {
                   'reqSigs': 1,
                   'type': 'pubkeyhash',
                   'addresses': [
-                    'moZY18rGNmh4YCPeugtGW46AkkWMQttBUD'
+                    'yUN2ZHVcy18UFmSAcrYWZgyz1NyhzY9BD7'
                   ]
                 },
                 'spentHeight': null,
@@ -561,7 +563,7 @@ describe('Addresses', function() {
       var addresses = new AddressController(node);
 
       var req = {
-        addrs: 'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK,moZY18rGNmh4YCPeugtGW46AkkWMQttBUD',
+        addrs: 'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE,yUN2ZHVcy18UFmSAcrYWZgyz1NyhzY9BD7',
         query: {},
         body: {}
       };
@@ -584,6 +586,7 @@ describe('Addresses', function() {
         'items': [
           {
             'txid': '63b68becb0e514b32317f4b29a5cf0627d4087e54ac17f686fcb1d9a27680f73',
+            'txlock': false,
             'version': 1,
             'locktime': 0,
             'vin': [
@@ -592,7 +595,7 @@ describe('Addresses', function() {
                 'vout': 1,
                 'sequence': 4294967295,
                 'n': 0,
-                'addr': 'moFfnRwt77pApKnnU6m5uocFaa43aAYpt5',
+                'addr': 'yU4ALabEhMFaXtqJBGRKySW4qCXQG365uR',
                 'valueSat': 53540000,
                 'value': 0.5354,
                 'doubleSpentTxID': null
@@ -602,7 +605,7 @@ describe('Addresses', function() {
                 'vout': 2,
                 'sequence': 4294967295,
                 'n': 1,
-                'addr': 'n1XJBAyU4hNR4xRtY3UxnmAteoJX83p5qv',
+                'addr': 'ygKnjKcpevopnXUQFD9CrQ4huRmspzbajv',
                 'valueSat': 299829,
                 'value': 0.00299829,
                 'doubleSpentTxID': null
@@ -617,7 +620,7 @@ describe('Addresses', function() {
                   'reqSigs': 1,
                   'type': 'pubkeyhash',
                   'addresses': [
-                    'mxT2KzTUQvsaYYothDtjcdvyAdaHA9ofMp'
+                    'ydFWt96q1AJzG7rQQPYygGpnRG3djmG8nJ'
                   ]
                 }
               },
@@ -629,7 +632,7 @@ describe('Addresses', function() {
                   'reqSigs': 1,
                   'type': 'pubkeyhash',
                   'addresses': [
-                    'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK'
+                    'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE'
                   ],
                 }
               },
@@ -641,7 +644,7 @@ describe('Addresses', function() {
                   'reqSigs': 1,
                   'type': 'pubkeyhash',
                   'addresses': [
-                    'moZY18rGNmh4YCPeugtGW46AkkWMQttBUD'
+                    'yUN2ZHVcy18UFmSAcrYWZgyz1NyhzY9BD7'
                   ]
                 }
               }
@@ -698,7 +701,7 @@ describe('Addresses', function() {
       var addresses = new AddressController(node);
 
       var req = {
-        addrs: 'mzkD4nmQ8ixqxySdBgsXTpgvAMK5iRZpNK,moZY18rGNmh4YCPeugtGW46AkkWMQttBUD',
+        addrs: 'yfYhcwQkixQFgYV8trXmXTajQynSNbRBFE,yUN2ZHVcy18UFmSAcrYWZgyz1NyhzY9BD7',
         query: {noSpent: '1', noScriptSig: '1', noAsm: '1'},
         body: {}
       };

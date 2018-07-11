@@ -1,26 +1,26 @@
-# Insight API
+# Insight API Dash
 
-A Particl blockchain REST and web socket API service for [Bitcore Node](https://github.com/instadex-android/instadex-bitcore-node).
+A Dash blockchain REST and web socket API service for [Bitcore Node Dash](https://github.com/instadex-android/instadex-bitcore-node).
 
 This is a backend-only service. If you're looking for the web frontend application, take a look at https://github.com/instadex-android/instadex-insight-ui.
 
 ## Getting Started
 
 ```bashl
-npm install -g bitcore-node@latest
-bitcore-node create mynode
+npm install -g instadex-bitcore-node@latest
+instadex-bitcore-node create mynode
 cd mynode
-bitcore-node install insight-api
-bitcore-node start
+instadex-bitcore-node install instadex-insight-api
+instadex-bitcore-node start
 ```
 
 The API endpoints will be available by default at: `http://localhost:3001/instadex-insight-api/`
 
 ## Prerequisites
 
-- [Bitcore Node 3.x](https://github.com/instadex-android/instadex-bitcore-node)
+- [Bitcore Node Dash 3.x](https://github.com/instadex-android/instadex-bitcore-node)
 
-**Note:** You can use an existing Bitcoin data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `bitcoin.conf`, as well as a few other additional fields.
+**Note:** You can use an existing Dash data directory, however `txindex`, `addressindex`, `timestampindex` and `spentindex` needs to be set to true in `dash.conf`, as well as a few other additional fields.
 
 ## Notes on Upgrading from v0.3
 
@@ -125,15 +125,15 @@ Or disabled entirely with:
 
 ### Block
 ```
-  /insight-api/block/[:hash]
-  /insight-api/block/00000000a967199a2fad0877433c93df785a8d8ce062e5f9b451cd1397bdbf62
+  /instadex-insight-api/block/[:hash]
+  /instadex-insight-api/block/00000000a967199a2fad0877433c93df785a8d8ce062e5f9b451cd1397bdbf62
 ```
 
 ### Block Index
 Get block hash by height
 ```
-  /insight-api/block-index/[:height]
-  /insight-api/block-index/0
+  /instadex-insight-api/block-index/[:height]
+  /instadex-insight-api/block-index/0
 ```
 This would return:
 ```
@@ -146,8 +146,8 @@ which is the hash of the Genesis block (0 height)
 
 ### Raw Block
 ```
-  /insight-api/rawblock/[:blockHash]
-  /insight-api/rawblock/[:blockHeight]
+  /instadex-insight-api/rawblock/[:blockHash]
+  /instadex-insight-api/rawblock/[:blockHeight]
 ```
 
 This would return:
@@ -161,7 +161,7 @@ This would return:
 
 Get block summaries by date:
 ```
-  /insight-api/blocks?limit=3&blockDate=2016-04-22
+  /instadex-insight-api/blocks?limit=3&blockDate=2016-04-22
 ```
 
 Example response:
@@ -195,31 +195,31 @@ Example response:
 
 ### Transaction
 ```
-  /insight-api/tx/[:txid]
-  /insight-api/tx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
-  /insight-api/rawtx/[:rawid]
-  /insight-api/rawtx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
+  /instadex-insight-api/tx/[:txid]
+  /instadex-insight-api/tx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
+  /instadex-insight-api/rawtx/[:rawid]
+  /instadex-insight-api/rawtx/525de308971eabd941b139f46c7198b5af9479325c2395db7f2fb5ae8562556c
 ```
 
 ### Address
 ```
-  /insight-api/addr/[:addr][?noTxList=1][&from=&to=]
-  /insight-api/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?noTxList=1
-  /insight-api/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?from=1000&to=2000
+  /instadex-insight-api/addr/[:addr][?noTxList=1][&from=&to=]
+  /instadex-insight-api/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?noTxList=1
+  /instadex-insight-api/addr/mmvP3mTe53qxHdPqXEvdu8WdC7GfQ2vmx5?from=1000&to=2000
 ```
 
 ### Address Properties
 ```
-  /insight-api/addr/[:addr]/balance
-  /insight-api/addr/[:addr]/totalReceived
-  /insight-api/addr/[:addr]/totalSent
-  /insight-api/addr/[:addr]/unconfirmedBalance
+  /instadex-insight-api/addr/[:addr]/balance
+  /instadex-insight-api/addr/[:addr]/totalReceived
+  /instadex-insight-api/addr/[:addr]/totalSent
+  /instadex-insight-api/addr/[:addr]/unconfirmedBalance
 ```
 The response contains the value in Satoshis.
 
 ### Unspent Outputs
 ```
-  /insight-api/addr/[:addr]/utxo
+  /instadex-insight-api/addr/[:addr]/utxo
 ```
 Sample return:
 ```
@@ -250,13 +250,13 @@ Sample return:
 ### Unspent Outputs for Multiple Addresses
 GET method:
 ```
-  /insight-api/addrs/[:addrs]/utxo
-  /insight-api/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/utxo
+  /instadex-insight-api/addrs/[:addrs]/utxo
+  /instadex-insight-api/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/utxo
 ```
 
 POST method:
 ```
-  /insight-api/addrs/utxo
+  /instadex-insight-api/addrs/utxo
 ```
 
 POST params:
@@ -264,27 +264,51 @@ POST params:
 addrs: 2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f
 ```
 
+### InstantSend Transactions
+If a Transaction Lock has been observed by Insight API a 'txlock' value of true will be included in the Transaction Object.
+
+Sample output:
+```
+{
+	"txid": "b7ef92d1dce458276f1189e06bf532eff78f9c504101d3d4c0dfdcd9ebbf3879",
+	"version": 1,
+	"locktime": 133366,
+	"vin": [{ ... }],
+	"vout": [{ ... }],
+	"blockhash": "0000001ab9a138339fe4505a299525ace8cda3b9bcb258a2e5d93ed7a320bf21",
+	"blockheight": 133367,
+	"confirmations": 37,
+	"time": 1483985187,
+	"blocktime": 1483985187,
+	"valueOut": 8.998,
+	"size": 226,
+	"valueIn": 8.999,
+	"fees": 0.001,
+	"txlock": true
+}
+```
+
 ### Transactions by Block
 ```
-  /insight-api/txs/?block=HASH
-  /insight-api/txs/?block=00000000fa6cf7367e50ad14eb0ca4737131f256fc4c5841fd3c3f140140e6b6
+  /instadex-insight-api/txs/?block=HASH
+  /instadex-insight-api/txs/?block=00000000fa6cf7367e50ad14eb0ca4737131f256fc4c5841fd3c3f140140e6b6
 ```
 ### Transactions by Address
 ```
-  /insight-api/txs/?address=ADDR
-  /insight-api/txs/?address=mmhmMNfBiZZ37g1tgg2t8DDbNoEdqKVxAL
+  /instadex-insight-api/txs/?address=ADDR
+  /instadex-insight-api/txs/?address=mmhmMNfBiZZ37g1tgg2t8DDbNoEdqKVxAL
 ```
 
 ### Transactions for Multiple Addresses
 GET method:
 ```
-  /insight-api/addrs/[:addrs]/txs[?from=&to=]
-  /insight-api/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/txs?from=0&to=20
+  /instadex-insight-api/addrs/[:addrs]/txs[?from=&to=]
+  /instadex-insight-api/addrs/2NF2baYuJAkCKo5onjUKEPdARQkZ6SYyKd5,2NAre8sX2povnjy4aeiHKeEh97Qhn97tB1f/txs?from=0&to=20
 ```
 
 POST method:
 ```
-  /insight-api/addrs/txs
+  /instadex-insight-api/addrs/txs
 ```
 
 POST params:
@@ -316,7 +340,8 @@ Sample output:
        size: 225,
        firstSeenTs: undefined,
        valueIn: 0.3454,
-       fees: 0.0001 },
+       fees: 0.0001,
+       txlock: false },
       { ... },
       { ... },
       ...
@@ -330,7 +355,7 @@ Note: if pagination params are not specified, the result is an array of transact
 ### Transaction Broadcasting
 POST method:
 ```
-  /insight-api/tx/send
+  /instadex-insight-api/tx/send
 ```
 POST params:
 ```
@@ -354,19 +379,92 @@ POST response:
   }
 ```
 
+### Budget Proposal List
+GET method:
+```
+  /instadex-insight-api/gobject/list/proposal
+```
+
+Sample output:
+```
+    [ { Hash: 'b6af3e70c686f660541a77bc035df2e5e46841020699ce3ec8fad786f7d1aa35',
+        DataObject: {
+          end_epoch: 1513555200,
+          name: 'flare03',
+          payment_address: 'yViyoK3NwfH5GXRo7e4DEYkzzhBjDNQaQG',
+          payment_amount: 5,
+          start_epoch: 1482105600,
+          type: 1,
+          url: 'https://www.instadex.io'
+        },
+        AbsoluteYesCount: 40,
+        YesCount: 40,
+        NoCount: 0,
+        AbstainCount: 0 } ]
+```
+
+### Budget Proposal Detail
+GET method:
+```
+  /instadex-insight-api/gobject/get/[:hash]
+  /instadex-insight-api/gobject/get/b6af3e70c686f660541a77bc035df2e5e46841020699ce3ec8fad786f7d1aa35
+```
+
+Sample output:
+```
+    [ { Hash: 'b6af3e70c686f660541a77bc035df2e5e46841020699ce3ec8fad786f7d1aa35',
+        CollateralHash: '24a71d8f221659717560365d2914bc7a00f82ffb8f8c68e7fffce5f35aa23b90',
+       	DataHex: '5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313531333535353230302c226e616d65223a22666c6172653033222c227061796d656e745f61646472657373223a22795669796f4b334e776648354758526f3765344445596b7a7a68426a444e51615147222c227061796d656e745f616d6f756e74223a352c2273746172745f65706f6368223a313438323130353630302c2274797065223a312c2275726c223a2268747470733a2f2f64617368646f742e696f2f702f666c6172653033227d5d5d',
+        DataObject: {
+          end_epoch: 1513555200,
+          name: 'flare03',
+          payment_address: 'yViyoK3NwfH5GXRo7e4DEYkzzhBjDNQaQG',
+          payment_amount: 5,
+          start_epoch: 1482105600,
+          type: 1,
+          url: 'https://www.instadex.io'
+        },
+        CreationTime: 1482223714,
+        FundingResult: {
+            AbsoluteYesCount: 40,
+            YesCount: 40,
+            NoCount: 0,
+            AbstainCount: 0
+        },
+        ValidResult: {
+            AbsoluteYesCount: 74,
+            YesCount: 74,
+            NoCount: 0,
+            AbstainCount: 0
+        },
+        DeleteResult: {
+            AbsoluteYesCount: 0,
+            YesCount: 0,
+            NoCount: 0,
+            AbstainCount: 0
+        },
+        EndorsedResult: {
+            AbsoluteYesCount: 0,
+            YesCount: 0,
+            NoCount: 0,
+            AbstainCount: 0
+        } } ]
+```
+
+
 ### Historic Blockchain Data Sync Status
 ```
-  /insight-api/sync
+  /instadex-insight-api/sync
 ```
 
 ### Live Network P2P Data Sync Status
 ```
-  /insight-api/peer
+  /instadex-insight-api/peer
 ```
 
 ### Status of the Bitcoin Network
 ```
-  /insight-api/status?q=xxx
+  /instadex-insight-api/status?q=xxx
 ```
 
 Where "xxx" can be:
@@ -379,7 +477,7 @@ Where "xxx" can be:
 
 ### Utility Methods
 ```
-  /insight-api/utils/estimatefee[?nbBlocks=2]
+  /instadex-insight-api/utils/estimatefee[?nbBlocks=2]
 ```
 
 
@@ -388,7 +486,18 @@ The web socket API is served using [socket.io](http://socket.io).
 
 The following are the events published by insight:
 
-`tx`: new transaction received from network. This event is published in the 'inv' room. Data will be a app/models/Transaction object.
+`tx`: new transaction received from network, txlock boolean is set true if a matching txlock event has been observed. This event is published in the 'inv' room. Data will be a app/models/Transaction object.
+Sample output:
+```
+{
+  "txid":"00c1b1acb310b87085c7deaaeba478cef5dc9519fab87a4d943ecbb39bd5b053",
+  "txlock": false,
+  "processed":false
+  ...
+}
+```
+
+`txlock`: InstantSend transaction received from network, this event is published alongside the 'tx' event when a transaction lock event occurs. Data will be a app/models/Transaction object.
 Sample output:
 ```
 {
@@ -397,7 +506,6 @@ Sample output:
   ...
 }
 ```
-
 
 `block`: new block received from network. This event is published in the `inv` room. Data will be a app/models/Block object.
 Sample output:
@@ -446,7 +554,11 @@ html
       socket.emit('subscribe', room);
     })
     socket.on(eventToListenTo, function(data) {
-      console.log("New transaction received: " + data.txid)
+      if (data.txlock) {
+        console.log("New InstantSend transaction received: " + data.txid)
+      } else {
+        console.log("New transaction received: " + data.txid)
+      }
     })
   </script>
 </body>
